@@ -7,8 +7,7 @@ st.set_page_config(page_title='Book Recommender', page_icon=':books:')
 import streamlit as st
 
 # Load data
-model_path = st.secrets["model_path"]
-model = pickle.load(open(model_path, 'rb'))
+model = pickle.load(open('model.pk1', 'rb'))
 book_names = pickle.load(open('books_name.pk1', 'rb'))
 final_rating = pickle.load(open('merge_data.pk1', 'rb'))
 book_pivot = pickle.load(open('book_pivot.pk1', 'rb'))
